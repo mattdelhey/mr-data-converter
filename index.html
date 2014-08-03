@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
   <!-- JQUERY -->
-  <script src="dist/js/juqery.js"></script>
+  <script src="dist/js/jquery-2.1.1.min.js"></script>
 
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="dist/css/bootstrap.css">
@@ -17,8 +17,7 @@
   <script src="dist/js/bootstrap.js"></script>
 
   <!-- BOOTSTRAP SWITCH -->
-  <link href="dist/css/bootstrap-switch.css" rel="stylesheet">
-  <script src="dist/js/bootstrap-switch.js"></script>
+  <script src="dist/js/button-switch.js"></script>
 
   <!-- APP -->
   <script src="js/CSVParser.js" type="text/javascript" charset="utf-8"></script>
@@ -35,20 +34,24 @@
     </br>
 
     <h1>Data Converter</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-
+    <p class="lead">Convert between multiple data formats: CSV, TSV, JSON, and more.
+      <br />Either upload your file or paste directly.
+    </p>
+    
     <hr />
 
-    <input type="checkbox" name="my-checkbox" checked>
-    <script>$("[name='my-checkbox']").bootstrapSwitch();</script>
+    <div class="btn-group btn-toggle"> 
+      <button class="btn btn-primary active" data-toggle="paste-open" data-target="#collapsible">Paste</button>
+      <button class="btn btn-default" data-toggle="upload-open" data-target="#collapsible">Upload</button>
+    </div>
+    
+    <div class="well collapse" id="collapsible">
+      <p>Paste</p>
+    </div>
+      
 
-      <!-- <div class="btn-group btn-toggle">  -->
-      <!--   <button class="btn btn-sm btn-primary active">Upload</button> -->
-      <!-- 	<button class="btn btn-sm btn-default">Paste</button> -->
-      <!-- </div> -->
 
-  </div>
-  
-</div><!-- /.container -->
+  </div><!-- /.container -->
+</div>
 </body>
 </html>
